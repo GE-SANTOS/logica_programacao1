@@ -6,28 +6,32 @@
         document.write("<br><br>");
     }
 
-    function mostra(frase){
+    function mostra(frase) {
 
         document.write(frase);
         pulaLinha();
     }
 
-    function calculaImc(peso, altura){
+    function calculaImc(peso, altura) {
 
-        var imc = peso / (altura * altura);
-        mostra(" O imc calculado é " + imc);
+        return peso / (altura * altura);
+
     }
 
-    var pesoGeovane = 81;
-    var alturaGeovane =1.82;
-    calculaImc(pesoGeovane, alturaGeovane);
+    /* var imcGeovane = calculaImc(81, 1.82);
+     var imcGeovana = calculaImc(50, 1.54);
+     var imcMadalena = calculaImc(72, 1.75);
+     var totalImc = imcGeovane + imcGeovana + imcMadalena;
 
-    var pesoGeovana = 50;
-    var alturaGeovana =1.54;
-    calculaImc(pesoGeovana, alturaGeovana);
+     mostra("O imc de Geovane é " + imcGeovane);
+     mostra("O imc de Geovana é " + imcGeovana);
+     mostra("O imc de Madalena é " + imcMadalena);
+     mostra("A soma total dos imc's é " + imcMadalena);*/
+    var nome = prompt("Informe seu nome")
+    var alturaInformada = prompt(nome + "informe sua altura");
+    var pesoInformado = prompt(nome + "informe seu peso");
 
-    var pesoMadalena = 72;
-    var alturaMadalena =1.75;
-    calculaImc(pesoMadalena, alturaMadalena);
+    var imc = calculaImc(pesoInformado, alturaInformada);
 
+    document.write(nome + ", o seu IMC é " + imc);
 </script>

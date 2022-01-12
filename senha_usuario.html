@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var numeroTentativas = 3;
+    var tentativa = 1;
+
+    while (tentativa <= numeroTentativas) {
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+
+            alert("Bem-vindo ao sistema " + loginInformado);
+
+            tentativa = numeroTentativas; // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá embaixo vai incrementar + 1!
+
+        } else {
+            if (tentativa == 3) {
+                alert("Senha bloqueada. Procure uma agência mais proxima de você.");
+            } else {
+                alert("Login invalido! Tente novamente.");
+            }
+        }
+        tentativa++;
+    }
+</script>
